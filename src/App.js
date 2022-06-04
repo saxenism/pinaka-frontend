@@ -28,11 +28,12 @@ function App() {
         <br />
         <form 
           name='chadEmails'
-          method='POST'
+          method='post'
           data-netlify="true" 
           onSubmit={handleSubmit} 
           className='mb-3'
         >
+          <input type="hidden" name="chadEmails" value="chadEmails"/>
           <label className='text-xl mb-3'>
             Interested to know more? Join the waitlist
               <br />
