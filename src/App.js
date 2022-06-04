@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css'
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
           onSubmit="submit" 
           className='mb-3'
         >
-          <input type="hidden" name="chadEmails" value="chadEmails"/>
+          <input type="hidden" name="pinaka-Emails" value="chadEmails"/>
           <label className='text-xl mb-3'>
             Interested to know more? Join the waitlist
               <br />
