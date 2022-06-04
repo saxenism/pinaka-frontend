@@ -3,22 +3,6 @@ import './App.css'
 
 function App() {
   const [email, setEmail] = useState('');
-  const [thankYouTextVisible, setThankYouTextVisible] = useState(false);
-  const [disableEmail, setDisableEmail] = useState(false);
-  const [submitButtonColor, setSubmitButtonColor] = useState('bg-indigo-800');
-  const [submitButtonText, setSubmitButtonText] = useState('Submit');
-
-  function handleSubmit(event) {
-   console.log("handleSubmit started running");   
-   event.preventDefault();
-
-   console.log(email);
-   setEmail('');
-   setSubmitButtonColor('bg-green-400');
-   setSubmitButtonText('Submitted');
-   setThankYouTextVisible(true);
-   setDisableEmail(true);
-  }
 
   return (
     <div className ="text-center align-middle">
@@ -39,7 +23,6 @@ function App() {
               <br />
               <input 
                 id='chadEmail' 
-                disabled = {disableEmail}
                 placeholder = 'Enter e-mail' 
                 className = "py-1 text-gray-800 text-center mr-3" 
                 onChange={event => setEmail(event.target.value)}
@@ -49,16 +32,11 @@ function App() {
               />
               <button 
                 type='submit'
-                className={`py-1.5 px-8 ${submitButtonColor} text-white font-bold`}>
-                  {submitButtonText}
+                className={`py-1.5 px-8 bg-indigo-800 text-white font-bold`}>
+                  Submit
                 </button>
           </label>
         </form>
-        {
-          thankYouTextVisible ? 
-            <h3>Thank you Chad. Will follow up soon.</h3>
-          : null
-        }
       </div>
     </div>
   );
