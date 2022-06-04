@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './App.css'
 
 function App() {
-  const [email, setEmail] = useState('');
 
   return (
     <div className ="text-center align-middle">
@@ -24,9 +23,7 @@ function App() {
               <input 
                 id='chadEmail' 
                 placeholder = 'Enter e-mail' 
-                className = "py-1 text-gray-800 text-center mr-3" 
-                onChange={event => setEmail(event.target.value)}
-                value = {email}
+                className = "py-1 text-gray-800 text-center mr-3"
                 type="email" 
                 name='email'
               />
