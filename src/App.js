@@ -29,9 +29,9 @@ function App() {
         <form 
           name='chadEmails'
           method='POST'
-          data-netlify='true'
           onSubmit={handleSubmit} 
           className='mb-3'
+          netlify 
         >
           <label className='text-xl mb-3'>
             Interested to know more? Join the waitlist
