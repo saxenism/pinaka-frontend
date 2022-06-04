@@ -30,7 +30,7 @@ function App() {
           name='chadEmails'
           method='post'
           data-netlify="true" 
-          onSubmit={handleSubmit} 
+          onSubmit="submit" 
           className='mb-3'
         >
           <input type="hidden" name="chadEmails" value="chadEmails"/>
