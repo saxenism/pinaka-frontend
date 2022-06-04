@@ -1,17 +1,40 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+export default function App() {
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  return (
+    <div className ="text-center align-middle">
+      <div className="align-middle my-8 text-gray-100 ">
+        <h1 className='text-3xl align-middle'>Welcome to Pinaka</h1>
+        <h3 class="text-2xl text-center">The web3 enabled evolution of e-commerce</h3>
+        <br />
+        <form 
+          name='chadEmails'
+          method='post'
+          data-netlify="true" 
+          onSubmit="submit" 
+          className='mb-3'
+        >
+          <input type="hidden" name="pinaka-Emails" value="chadEmails"/>
+          <label className='text-xl mb-3'>
+            Interested to know more? Join the waitlist
+              <br />
+              <input 
+                id='chadEmail' 
+                placeholder = 'Enter e-mail' 
+                className = "py-1 text-gray-800 text-center mr-3"
+                type="email" 
+                name='email'
+              />
+              <button 
+                type='submit'
+                className={`py-1.5 px-8 bg-indigo-800 text-white font-bold`}>
+                  Submit
+                </button>
+          </label>
+        </form>
+      </div>
+    </div>
+  );
+}
